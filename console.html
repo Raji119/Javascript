@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Console</title>
+    </head>
+    <body>
+        <script>
+        //clear
+        console.clear();
+
+        //log
+        console.log("I am Log Message");
+        console.log('abc');
+        console.log(1);
+        console.log(true);
+        console.log(null);
+        console.log(undefined);
+        console.log([1,2,3,4]);
+        console.log({a:1,b:2,c:3});
+
+        
+        //info
+        console.info("I am Information Message");
+
+        //warn
+        console.warn("I am Warn Message");
+
+        //error
+        console.error("I am Error Message");
+
+        //table
+        let student = {
+            name   : 'Raji',
+            age    : 22,
+            course : 'CSE'
+        };
+        console.table(student);
+        console.table({'a':1,'b':2});
+
+        
+        //console.time() and console.timeEnd()
+        console.time('abc');
+        let fun1= function() {
+            console.log("Fun1 is Running");
+        }
+        let fun2=function() {
+            console.log("Fun1 is Running");
+        }
+        fun1();
+        fun2();
+        console.timeEnd('abc');
+
+        //count
+        for(let i=0;i<5;i++) {
+            console.count(i);
+        }
+
+        //console.group() and console.groupEnd()
+        console.group('Simple');
+        console.warn("Warning!");
+        console.error("Error here");
+        console.log("log");
+        console.groupEnd('Simple');
+        console.log("New Section");
+    
+    </script>
+    Console Properties for displaying
+    </body>
+</html>
