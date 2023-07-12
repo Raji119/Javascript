@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Functions</title>
+</head>
+
+<body>
+    <script>
+        //1.Simple Functions
+        //Function without Parameters
+        function greet() {
+            console.log('Good Morning');
+        }
+        greet();
+        console.log(greet);
+
+
+        //Function with Parameters
+        let wishMe = function (name, age) {
+            let message = `Hello ${name} you are ${age} yrs old`;
+            console.log(message);
+        };
+        wishMe('john', 5);
+        wishMe(name = "JOhn", age = "56");
+
+        //Function with return Type
+        let sum = function (a, b) {
+            let result = a + b;
+            return result;
+        };
+        let output = sum(10, 20);
+        console.log(output);
+        console.log(sum(10, 20));
+
+        //2.Function Expression
+        let greetMe=function() {
+            console.log('Good Morning');
+        };
+        greetMe();
+        console.log(greetMe);
+
+        //3.Complex Functions
+        //Function with Object as Parameter
+        let printObject=function(obj){
+            console.log(obj);
+        };
+        let mobile={
+            brand :'apple',
+            color :'silver',
+            price : 35000
+        };
+
+        printObject(mobile);
+
+        printArray=function(array) {
+            for(let index in array){
+                console.log(index);
+            }
+        };
+
+        printArray([10,20,30,40]);
+        </script>
+</body>
+
+</html>
