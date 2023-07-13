@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest and Compound Interest</title>
+    <script>
+        function simpleInterest(p,r,t){
+            SiCi.si.value=p*t*r/100.0;
+        }
+        function compundInterest(p,r,t){
+            SiCi.ci.value=p*((1+r/100)**t)-p;
+        }
+    </script>
+    <style>
+        table{
+           background-color: aqua; 
+           font-family: "Comic Sans MS";
+           margin-top: 15%;
+           margin-left: 40%;
+           width: 400px;
+           height: 200px;
+           font-size: larger;
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form name=SiCi>
+            <tr>
+                <td>Principal Amount:</td>
+                <td><input type="number" name=p></td>
+            </tr>
+             <tr>
+                 <td>Rate of Interest:</td>
+                 <td><input type="number" name=r></td>
+            </tr>
+            <tr>
+                <td>Time Period:</td>
+                <td><input type="number" name=t></td>
+            </tr>
+            <tr>
+                <td>Simple Interest:</td>
+                <td><input type="number" name=si readonly></td>
+            </tr>
+            <tr>
+                <td>Compound Interest:</td>
+                <td><input type="number" name=ci readonly></td>
+            </tr>
+            <tr align="center">
+                <td><input type="button" value=Result 
+                    onclick="simpleInterest(p.value,r.value,t.value),
+                    compundInterest(p.value,r.value,t.value);">
+                </td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
