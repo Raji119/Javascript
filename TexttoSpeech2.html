@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to speech</title>
+</head>
+
+<body>
+    <form>
+        <button onclick="TextToSpeech();">button</button>
+    </form>
+    <script>
+        
+        function TextToSpeech() {
+            let text = "Hi , I'm Cortana";
+            let speech = new SpeechSynthesisUtterance();
+
+            speech.text = text;
+            speech.rate = 1;
+            speech.volume = 1;
+            speech.pitch = 1;
+
+            //Speak in language
+            speech.lang = "en-US";
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+
+</html>
