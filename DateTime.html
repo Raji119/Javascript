@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Time Example</title>
+    <script>
+        function now() {
+            let curTime=new Date();
+            hr=curTime.getHours();
+            min=curTime.getMinutes();
+            sec=curTime.getSeconds();
+            window.alert("Current Time :"+hr+" Hrs : "+min+" mins : "+sec+" secs");
+        }
+
+        function yesterday() {
+            let yesterday=new Date();
+            yesterday.setDate(yesterday.getDate()-1);
+            window.alert("Yesterday's Date and Time : "+yesterday);
+        }
+
+        function tenYearsAgo() {
+            let tenYearsAgo=new Date();
+            tenYearsAgo.setFullYear(tenYearsAgo.getFullYear()-10);
+            window.alert("10 Years Ago From Today :"+tenYearsAgo);
+        }
+        
+        function oneWeekFrom() {
+            let  oneWeekFrom=new Date();
+            oneWeekFrom.setDate(oneWeekFrom.getDate()+7);
+            window.alert("One Week From Date and Time : "+oneWeekFrom);
+        }
+
+    </script>
+</head>
+<body>
+   <h1>Date and Time</h1>
+   <form name="DateTime">
+       <input type="button" value="Now" onclick="now();"><br><br>
+       <input type="button" value="Yesterday" onclick="yesterday();"> <br> <br>
+       <input type="button" value="10 Years ago" onclick="tenYearsAgo();"> <br> <br>
+       <input type="button" value="1 Week From" onclick="oneWeekFrom();"> <br> <br>
+   </form>
+</body>
+</html>
