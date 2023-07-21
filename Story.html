@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random Story Generator</title>
+</head>
+<body>
+    <script>
+
+        function storyGenerator() {
+
+        const article     = ['the','a','one','some','any'];
+        const noun        = ['Boy','Girl','Dog','Town','Car'];
+        const verb        = ['Drove','Jumped','Ran','Walked','Skipped'];
+        const preposition = ['to','from','over','under','on'];
+        
+        let sentence      = "Once upon a Time";
+        let randArticle;
+
+        for(i=0;i<20;i++) {
+            randArticle =article[Math.floor((Math.random()*5))];
+            sentence  += " "+randArticle.charAt(0).toUpperCase()+randArticle.slice(1)+
+                         " "+noun[Math.floor((Math.random()*5))]+
+                         " "+verb[Math.floor((Math.random()*5))]+
+                         " "+preposition[Math.floor((Math.random()*5))]+
+                         " "+article[Math.floor((Math.random()*5))]+
+                         " "+noun[Math.floor((Math.random()*5))]+".";
+        }
+        
+        sentence +="\n\n \t\tThe End";
+        Story.storyDisplay.value = sentence;
+    }
+    </script>
+    <form name="Story">
+        <h1 id="h1">Click Below To Generate a Random Story</h1>
+        <input type="button" value="Click" onclick="storyGenerator();"><br>
+        <h1>Generated Story</h1>
+        <textarea rows="20" cols="40" name="storyDisplay" readonly></textarea>
+    </form>
+</body>
+</html>
