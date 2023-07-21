@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Values Select</title>
+    <script>
+        function listboxresult(){
+            var spanresult=document.getElementById("result");
+            spanresult.value="";
+            var x=document.getElementById("sel");
+            for(var i=0;i<x.options.length;i++){
+                if(x.options[i].selected===true){
+                    spanresult.value+=x.options[i].value+" ";
+                    document.getElementById("result").innerHTML=spanresult.value;
+                    document.getElementById("result").style.color="green";
+                }
+            }
+            if(document.getElementById("result").value==""){
+                document.getElementById("result").innerHTML="Please Select Atleast One Option";
+                document.getElementById("result").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="sel" multiple>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+        <option value="Green">green</option>
+        <option value="bluek">Blue</option>
+        <option value="red">red</option>
+    </select>
+    <span id="result"></span>
+    <hr>
+    <input type="button" id=but1 value="click" onclick="listboxresult();">
+</body>
+</html>

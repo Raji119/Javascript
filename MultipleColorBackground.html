@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Semester TimeTable</title>
+    <style>
+        table{
+            background: linear-gradient(-320deg,rgb(243,54,54),rgb(226,266,63));
+            border: 6px groove red;
+            border-radius: 20px;
+        }
+        
+        td{
+            transition: transform 1s;
+        }
+        td:hover{
+            border-radius: 10px;
+            transform: scale(1.1);
+            background-color: rgb(81,245,237);
+        }
+        .colo{
+            animation: colo 3.3s linear infinite both;
+        }
+        @keyframes colo{
+            0%{
+                background: rgb(204,77,3);
+            }
+            50%{
+                background: rgba(255,255,255,0.876);
+            }
+            100%{
+                background: rgb(3,73,3);
+            }
+        }
+    </style>
+</head>
+<body class="colo">
+    <center>
+        <b>
+            <font color=blue face=consolas size=4>AME's Science Degree College</font>
+            <br>
+            <font color=green face=garamond size=5>Department of Computer Science</font>
+            <br><br>
+        </b>
+    <u><font color="red" face="consolas" size=5> BCA V Semester Class Time Table</font></u>
+    <br>
+    <table border=2 cellpadding=5 bgcolor="pink" cellspacing="0" bordercolor="blue" width=50%>
+        <tr>
+            <th colspan="8">
+                <pre><font color=blue face=consolas size=4>Room No : 301                                      WEF : 16-11-2021</font></pre>
+            </th>
+        </tr>
+        <tr>
+            <th>Time<br>/<br>Day</th>
+            <th>08:00<br>9:00</th>
+            <th>9:00 <br>10:00</th>
+            <th>10:00<br>11:00</th>
+            <th>11:00<br>11:30</th>
+            <th>11:30<br>12:30</th>
+            <th>12:30<br>1:30</th>
+            <th>1:30<br>2:30</th>
+        </tr>
+        <tr align="center">
+            <th>Mon</th>
+            <td>WT <br>(MN)</td>
+            <td>Python<br>(VD)</td>
+            <td>Python<br>(VD)</td>
+            <th rowspan="3"><b>B<br>R<br>E<br>A<br>K</b></th>
+            <td colspan="3"> Lab 1 B2 PYP(VD & MN) <br> Lab 2 B1 DC&N(VV&LD)</td>
+        </tr>
+        <tr align="center">
+            <th >Tue</th>
+            <td>WT <br>(MN)</td>
+            <td>Perl<br>(LD)</td>
+            <td>ST<br>(VV)</td>
+            <td>DC&N<br>(VV)</td>
+            <td>&#8212;</td>
+            <td>&#8212;</td>
+        </tr>
+    </tr>
+    <tr align="center">
+        <th >Wed</th>
+        <td>ST<br>(VV)</td>
+        <td>DC&N<br>(VV)</td>
+        <td>WT <br>(MN)</td>
+        <td>WT <br>(MN)</td>
+        <td>&#8212;</td>
+        <td>&#8212;</td>
+    </tr>
+    <tr align="center">
+        <th >Thu</th>
+        <td colspan="4"> Lab 1 B2 PYP(VD & MN) <br> Lab 2 B1 DC&N(VV&LD)</td>
+        <td>&#8212;</td>
+        <td>&#8212;</td>
+        <td>&#8212;</td>
+    </tr>
+    <tr align="center">
+        <th >Fri</th>
+        <td>Python<br>(VD)</td>
+        <td>Perl<br>(LD)</td>
+        <td>DC&N<br>(VV)</td>
+        <th rowspan="2"><b>B<br>R<br>E<br>A<br>K</b></th>
+        <td colspan="3"> Lab 1 B1 WT(MN & VD) <br> Lab 2 B2 Perl/ST(VV&LD)</td>
+     </tr>
+    <tr align="center">
+        <th >Sat</th>
+        <td>&#8212;</td>
+        <td>Python<br>(VD)</td>
+        <td>DC&N<br>(VV)</td>
+        <td colspan="3"> Lab 1 B2 WT(MN & PL) <br> Lab 2 B2 Perl/ST(VV&LD)</td>
+    </tr>     
+    </table>
+    </center>
+</body>
+</html>
