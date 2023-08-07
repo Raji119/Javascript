@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+    form{
+        width: 300px;
+        background-color: #c996cc;
+        border: 7px solid #1c0c5b;
+        color: white;
+    }
+   form p input[type=button]{
+        background-color: #916bbf;
+        border: 2px solid #1c0c5b;
+        padding: 10px;
+        color: white;
+    }
+    p{
+        text-align: center;
+    }
+    form header{
+        text-align: center;
+        font-size: 20px;
+        background-color: #916bbf;
+        padding: 10px;
+    }
+    .box{
+    font-size: 18px;
+    height: 35px;
+    outline: none;
+    border:none; 
+    width: 290px;
+    margin: 5px;
+    background: transparent;
+    border-bottom: 3px solid #1c0c5b;
+}
+ ::placeholder{
+    color: #5c47b6;
+} 
+    </style>
+
+    <script>
+        let fact = (n) => {
+               n=parseInt(n);
+               if(n>=0) {
+                   let fact=1;
+                   for(i=2;i<=n;i++) 
+                      fact*=i;
+                    Fact.res.value=n+"!="+fact;
+               }
+               else {
+                     msg="Factorial of "+n+" cannot be found";
+                     Fact.res.value=msg;
+               }
+        }
+    </script>
+</head>
+<body>
+    <form name="Fact">
+        <header>Factorial</header>
+        <p><input type="number" class="box" name="n" placeholder="Enter an Integer Number"></p>
+        <p><input type="text"class="box" name="res" placeholder=" Displays Factorial Result " readonly></p>
+        <p><input type="button" value="Compute Factorial" onclick="fact(n.value);"></p>
+        
+    </form>
+</body>
+</html>
