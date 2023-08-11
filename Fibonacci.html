@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <style>
+        body{
+            /* background-image: url(4ee10db76bb3f7c90300000d.jpg);
+            background-size: cover; */
+            opacity: 1;
+            text-align: center;
+        }
+        div{
+            font-size: 18px;
+            line-height: 2.5em;
+        }
+        header{
+            font-size: 30px;
+            font-weight: bold;          
+        }
+        input{
+            /* background-color: pink; */
+            box-shadow: 10px 10px 10px black;
+            border-radius: 30px;
+        }
+    </style>
+    <script>
+        function fib(n){
+            n=parseInt(n);
+            if(n>0) {
+                let f0=0,f1=1,f2,i;
+                document.writeln("The Fibonacci Series is: <br>")
+                // document.body.style.backgroundImage="url('4ee10db76bb3f7c90300000d.jpg')";
+                // document.body.style.backgroundSize="cover";
+                 document.writeln(f0+"<br>");
+                 if(n>1)
+                   document.writeln(f1+"<br>");
+                for(i=2;i<n;i++){
+                    f2=f0+f1;
+                    f0=f1;
+                    f1=f2;
+                    document.writeln(f2+"<br>");
+                }
+             }
+             else{
+                 alert("Enter Valid Input Greater than Zero!!!");
+             }
+        }
+    </script>
+</head>
+<body id="body">
+    <form>
+        <header>Fibonacci Series</header>
+        <div>Enter a Number:</div>
+        <div><input type="number" name="n"></div>
+        <div><input type="button" value="calculate" onclick="fib(n.value);"></div>
+    </form>
+</body>
+</html>
