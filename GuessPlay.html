@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessPlay</title>
+</head>
+<body>
+    <form>
+        Guess an Number(1-100):
+        <input type="number" name="num">
+        <input type="submit" onclick="guessed(num.value);">
+    </form>
+    <script>
+        var n = 10;
+        function guessed(num){
+            let num1 = parseInt(num);
+            console.log(n);
+            if(n==num1){
+                alert("You Guessed it Right");
+            }else{
+                alert("Try again...");
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
